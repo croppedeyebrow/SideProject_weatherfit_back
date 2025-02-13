@@ -25,7 +25,7 @@ public class User {
     private String password;
     @Column(name = "name", nullable = false)
     private String name;
-    @Column(name = "profileImage", nullable = false, columnDefinition = "VARCHAR(255) DEFAULT 'default.jpg'")
+    @Column(name = "profileImage", nullable = false, length = 100000)
     private String profileImage;
     @Column(name = "ageGroup", nullable = false)
     private String ageGroup;

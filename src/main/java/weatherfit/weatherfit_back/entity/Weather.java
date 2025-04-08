@@ -44,11 +44,18 @@ public class Weather {
     @Column(name = "current_temp", nullable = false)
     private int current_Temp;
 
+    @Column(name = "humidity", nullable = false)
+    private int humidity;
+
+    @Column(name = "wind_speed", nullable = false)
+    private int wind_Speed;
+
+
 
     @Builder
     public Weather(int min_Temp, int max_Temp, WeatherCondition weather_Condition, 
                   int latitude, int longitude, String weather_Date, String weather_Time, 
-                  int current_Temp) {
+                  int current_Temp, int humidity, int wind_Speed) {
         this.min_Temp = min_Temp;
 
         this.max_Temp = max_Temp;
@@ -58,6 +65,7 @@ public class Weather {
         this.weather_Date = weather_Date;
         this.weather_Time = weather_Time;
         this.current_Temp = current_Temp;
-
+        this.humidity = humidity;
+        this.wind_Speed = wind_Speed;   
     }
 }

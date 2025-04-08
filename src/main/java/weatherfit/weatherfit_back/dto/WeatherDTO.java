@@ -20,6 +20,8 @@ public class WeatherDTO {
     private String weather_Date;
     private String weather_Time;
     private int current_Temp;
+    private int humidity;
+    private int wind_Speed;
 
 
     public static WeatherDTO of(Weather weather) {
@@ -33,6 +35,8 @@ public class WeatherDTO {
                 .weather_Date(weather.getWeather_Date())
                 .weather_Time(weather.getWeather_Time())
                 .current_Temp(weather.getCurrent_Temp())
+                .humidity(weather.getHumidity())
+                .wind_Speed(weather.getWind_Speed())
                 .build();
 
 

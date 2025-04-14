@@ -40,7 +40,9 @@ public class Coordinate {
     private String targetAgeGroup;
 
     @OneToMany(mappedBy = "coordinate", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Builder.Default
     private List<Like> likes = new ArrayList<>();
+    
 
     // preference 필드의 getter 메서드 오버라이드
     public String getPreference() {

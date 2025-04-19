@@ -147,6 +147,73 @@ public class CoordinateController {
     
     
     
-    
+        ///////////////////
+        /// 
+        
+        // 착장 정보 중 tpo 컬럼 조회
+        @GetMapping("/tpo")
+        public ResponseEntity<List<String>> getTpoList() {
+            List<String> tpoList = coordinateService.getTpoList();
+            return new ResponseEntity<>(tpoList, HttpStatus.OK);
+        }
+
+        // 착장 정보 중 tpo 컬럼 중 daily의 coordinateImg 조회
+        @GetMapping("/tpo/daily")
+        public ResponseEntity<List<CoordinateDTO>> getDailyTpoList() {
+            List<CoordinateDTO> dailyTpoList = coordinateService.getDailyTpoList();
+            return new ResponseEntity<>(dailyTpoList, HttpStatus.OK);
+        }
+
+       // 착장 정보 중 tpo 컬럼 중 meeting의 coordinateImg 조회
+       @GetMapping("/tpo/meeting")
+       public ResponseEntity<List<CoordinateDTO>> getMeetingTpoList() {
+        List<CoordinateDTO> meetingTpoList = coordinateService.getMeetingTpoList();
+        return new ResponseEntity<>(meetingTpoList, HttpStatus.OK);
+       }
+
+       // 착장 정보 중 tpo 컬럼 중 date의 coordinateImg 조회
+       @GetMapping("/tpo/date")
+       public ResponseEntity<List<CoordinateDTO>> getDateTpoList() {
+        List<CoordinateDTO> dateTpoList = coordinateService.getDateTpoList();
+        return new ResponseEntity<>(dateTpoList, HttpStatus.OK);
+       }
+
+       // 착장 정보 중 tpo 컬럼 중 exercise의 coordinateImg 조회
+       @GetMapping("/tpo/exercise")
+       public ResponseEntity<List<CoordinateDTO>> getExerciseTpoList() {
+        List<CoordinateDTO> exerciseTpoList = coordinateService.getExerciseTpoList();
+        return new ResponseEntity<>(exerciseTpoList, HttpStatus.OK);
+       }
+
+       // 착장 정보 중 tpo 컬럼 중 work의 coordinateImg 조회
+       @GetMapping("/tpo/work")
+       public ResponseEntity<List<CoordinateDTO>> getWorkTpoList() {
+        List<CoordinateDTO> workTpoList = coordinateService.getWorkTpoList();
+        return new ResponseEntity<>(workTpoList, HttpStatus.OK);
+       }
+       
+       
+       // 착장 정보 중 tpo 컬럼 중 party의 coordinateImg 조회
+       @GetMapping("/tpo/party")
+       public ResponseEntity<List<CoordinateDTO>> getPartyTpoList() {
+        List<CoordinateDTO> partyTpoList = coordinateService.getPartyTpoList();
+        return new ResponseEntity<>(partyTpoList, HttpStatus.OK);
+       }
+       
+       // 착장 정보 중 tpo 컬럼 중 travel의 coordinateImg 조회
+       @GetMapping("/tpo/travel")
+       public ResponseEntity<List<CoordinateDTO>> getTravelTpoList() {
+        List<CoordinateDTO> travelTpoList = coordinateService.getTravelTpoList();
+        return new ResponseEntity<>(travelTpoList, HttpStatus.OK);
+       }
+       
+       // 착장 정보 중 tpo 컬럼 중 wedding의 coordinateImg 조회
+       @GetMapping("/tpo/wedding")
+       public ResponseEntity<List<CoordinateDTO>> getWeddingTpoList() {
+        List<CoordinateDTO> weddingTpoList = coordinateService.getWeddingTpoList();
+        return new ResponseEntity<>(weddingTpoList, HttpStatus.OK);
+       }
+       
+   
     
 }

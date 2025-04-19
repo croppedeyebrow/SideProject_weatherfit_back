@@ -18,3 +18,4 @@ public class WeatherfitBackApplication {
 		return new StandardServletMultipartResolver();
 	}
 }
+
